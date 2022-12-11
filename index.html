@@ -14,20 +14,26 @@
     }
   </style>
   <script>
-    // Get a reference to the p element
-    var p = document.querySelector("p");
+    // Add an event listener that will be executed when the body element is loaded
+    document.body.addEventListener("load", function() {
+      // Get a reference to the p element
+      var p = document.querySelector("p");
 
-    // Set the initial text of the p element
-    p.textContent = "OwO";
+      // Check if the p element exists
+      if (p) {
+        // Set the initial text of the p element
+        p.textContent = "OwO";
 
-    // Add an event listener that will change the text to "owo" when the mouse is hovered over the p element
-    p.addEventListener("mouseover", function() {
-      p.textContent = "owo";
-    });
+        // Add an event listener that will change the text to "owo" when the mouse is hovered over the p element
+        p.addEventListener("mouseover", function() {
+          p.textContent = "owo";
+        });
 
-    // Add an event listener that will change the text back to "OwO" when the mouse is no longer hovered over the p element
-    p.addEventListener("mouseout", function() {
-      p.textContent = "OwO";
+        // Add an event listener that will change the text back to "OwO" when the mouse is no longer hovered over the p element
+        p.addEventListener("mouseout", function() {
+          p.textContent = "OwO";
+        });
+      }
     });
   </script>
 </head>
